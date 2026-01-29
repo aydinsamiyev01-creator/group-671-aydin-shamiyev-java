@@ -2,119 +2,115 @@ package classwork_3;
 
 public class Classwork_3 {
 public static void main(String[] args) {
-//	1. Выведи числа от 1 до 20 с помощью `for`.
-	 for(int i = 1;i < 20;i++) {
-		 System.out.println(i);
-	 }
-//
-//	2. Выведи числа от 10 до 1 (обратный отсчёт).
-	 for(int i = 10;i > 0;i==) {
-		 System.out.println(i);
-	 }
-//
-//	3. Выведи все чётные числа от 2 до 30.
-//     for(int i = 1;i < 31;i++) {
-//         if(i % 2 == 1) continue;
-	       System.out.println(i);
-       }
-//	4. Выведи таблицу умножения на 6 (от 6×1 до 6×10) в таком виде:  
-//	   `6 × 4 = 24`
-         for(byte i = 1 ;i <= 10;i++) {
-        	 System.out.println(6 + "=" + i +"="  + i * 6);
-         }
-//
-//	5. С помощью цикла `while` выведи числа от 1 до 15. 0;
-         int i = 1;
-         while(i < 15) {
-        	 System.out.println(i);
-        	 i++;
-         }
-//
-//	6. С помощью `do-while` выведи числа от 5 до 25 (даже если условие сразу ложно — всё равно должно вывести 5).
-         int a = 5;
-         do {
-        	 System.out.println(a);
-        	 a++;
-         } while(a > 5 && a < 25);
-//
-//	### Считаем и накапливаем
-//
-//	7. Посчитай сумму чисел от 1 до 20 (1 + 2 + 3 + … + 20).
-         int sum = 1;
-         for(int s = 1;s < 20;s++) {
-        	 sum += i;
-         }
-         System.out.println(sum);
-//	8. Посчитай сумму только нечётных чисел от 1 до 30.
-         
-//
-//	9. Посчитай, сколько раз встречается цифра 7 в числах от 1 до 50.  
-//	   (Подсказка: превращай число в строку и проверяй каждый символ)
-//
-//	10. Найди произведение чисел от 1 до 10 (факториал 10!).
-//
-//	### Рисуем простые фигуры символами
-//
-//	11. Выведи 10 звёздочек в одну строку:  
-//	    `**********`
-//
-//	12. Выведи квадрат 5×5 из звёздочек:
-//
-//	    ```
-//	    *****
-//	    *****
-//	    *****
-//	    *****
-//	    *****
-//	    ```
-//
-//	13. Выведи прямоугольный треугольник (правая сторона):
-//
-//	    ```
-//	    *
-//	    **
-//	    ***
-//	    ****
-//	    *****
-//	    ```
-//
-//	14. Выведи перевёрнутый треугольник:
-//
-//	    ```
-//	    *****
-//	    ****
-//	    ***
-//	    **
-//	    *
-//	    ```
-//
-//	### Задания с вводом от пользователя (Scanner)
-//
-//	15. Спроси у пользователя число n. Выведи n звёздочек в строку.
-//
-//	16. Спроси число n. Выведи числа от 1 до n.
-//
-//	17. Спроси два числа: начало и конец. Выведи все числа в этом диапазоне.
-//
-//	18. Спроси число n. Посчитай сумму чисел от 1 до n.
-//
-//	19. Игра «Угадай число».  
-//	    Загадай число от 1 до 20 (просто напиши его в коде).  
-//	    Пусть пользователь вводит числа, пока не угадает.  
-//	    После каждой попытки пиши: «Больше», «Меньше» или «Угадал!».
-//
-//	20. Считай, сколько попыток понадобилось, чтобы угадать число (добавь счётчик).
-//
-//	### Чуть посложнее (если уже комфортно)
-//
-//	21. Выведи таблицу умножения от 1 до 9 (как настоящая табличка):
-//
-//	    ```
-//	    1 × 1 = 1    1 × 2 = 2    ...
-//	    2 × 1 = 2    2 × 2 = 4    ...
-//	    ...
-//	    ```
-//
-//	22. Выведи числа Фибоначчи до 100 (1, 1, 2, 3, 5, 8, 13, …).
-//
-//	23. Посчитай сумму цифр в числе (например, 12345 → 1+2+3+4+5 = 15).
+	//1
+	class Account {
+	    private String owner;
+	    private double balance;
+
+	    public Account(String owner, double balance) {
+	        this.owner = owner;
+	        this.balance = balance;
+	    }
+
+	    public void deposit(double amount) {
+	        if (amount > 0) {
+	            balance += amount;
+	        }
+	    }
+
+	    public void withdraw(double amount) {
+	        if (amount <= balance) {
+	            balance -= amount;
+	        } else {
+	            System.out.println("Ошибка: недостаточно средств!");
+	        }
+	    }
+
+	    public double getBalance() {
+	        return balance;
+	        //2
+	        class Rectangle {
+	            double width;
+	            double height;
+
+	            public Rectangle(double width, double height) {
+	                this.width = width;
+	                this.height = height;
+	            }
+
+	            public double area() {
+	                return width * height;
+	            }
+
+	            public Rectangle scale(double factor) {
+	                return new Rectangle(width * factor, height * factor);
+	            }
+	        }
+	        //3
+	        class Temperature {
+	            double celsius;
+
+	            public Temperature(double celsius) {
+	                this.celsius = celsius;
+	            }
+
+	            public double toFahrenheit() {
+	                return celsius * 9 / 5 + 32;
+	            }
+
+	            public static Temperature fromFahrenheit(double f) {
+	                return new Temperature((f - 32) * 5 / 9);
+	            }
+	        }
+	        //4
+	        class Employee {
+	            double salary;
+
+	            public Employee(double salary) {
+	                this.salary = salary;
+	            }
+
+	            double calculateBonus() {
+	                return salary * 0.10;
+	            }
+	        }
+
+	        class Manager extends Employee {
+
+	            public Manager(double salary) {
+	                super(salary);
+	            }
+
+	            @Override
+	            double calculateBonus() {
+	                return super.calculateBonus() * 2;
+	            }
+	        }
+	        //5
+	        class Character {
+	            String name;
+	            int health;
+	            int strength;
+
+	            public Character(String name, int health, int strength) {
+	                this.name = name;
+	                this.health = health;
+	                this.strength = strength;
+	            }
+
+	            public Character heal(int value) {
+	                health += value;
+	                return this;
+	            }
+
+	            public Character train() {
+	                strength += 5;
+	                return this;
+	            }
+
+	            public void printStats() {
+	                System.out.println("Имя: " + name);
+	                System.out.println("Здоровье: " + health);
+	                System.out.println("Сила: " + strength);
+	            }
+	        }
