@@ -70,7 +70,7 @@ public class Runner {
 			    System.out.println();
 			}
 			//10
-			for (int row = 0; row < 4; row++) {
+			hfor (int row = 0; row < 4; row++) {
 			    for (int col = 0; col < 8; col++) {
 			        // Проверяем сумму индексов. Если четная - символ, нечетная - пробел
 			        if ((row + col) % 2 == 0) {
